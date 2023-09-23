@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f5f6f7;
+}
+
+.header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+}
+
+.gallery {
+    display: flex;
+    /* Oppretter en flex-container */
+    flex-direction: row;
+    /* Ordner flex-elementene i en rad */
+    flex-wrap: wrap;
+    /* Tillater elementene å wrappe til nye linjer hvis nødvendig */
+    justify-content: center;
+    /* Sentrerer elementene horisontalt innenfor containeren */
+    align-items: center;
+    /* Sentrerer elementene vertikalt innenfor containeren */
+    gap: 16px;
+    /* Legger til 16 piksler mellomrom mellom elementene */
+    max-width: 1400px;
+    /* Setter maksimal bredde for galleriet til 1400 piksler */
+    margin: 0 auto;
+    /* Sentrerer galleriet horisontalt ved å sette top- og bottom-margen til 0 og auto-margen på venstre og høyre side */
+    padding: 20px 10px;
+    /* Legger til 20 piksler padding på top og bottom, og 10 piksler padding på venstre og høyre side av galleriet */
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery::after {
+    content: "";
+    width: 350px;
+}
